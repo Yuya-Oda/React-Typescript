@@ -1,6 +1,6 @@
 module.exports = {
     mode: 'development', //開発モード　本番モード：production
-    entry: './src/index.ts', // 起点となる場所
+    entry: './src/index.tsx', // 起点となる場所
     output: {
       filename: 'main.js', //バンドル？？
     },
@@ -13,12 +13,12 @@ module.exports = {
       publicPath: '/',
     },
     resolve: {　// ビルドする際の拡張子の指定？
-      extensions: ['.ts', '.js'],
+      extensions: ['.ts', '.tsx', '.js'], // Reactを導入したのでtsxを追加
     },
     module: {
       rules: [
         {
-          test: /\.ts$/,
+          test: /\.tsx?$/, // 「？」で .ts　.tsx 両方に対応させる
           use: [{ loader: 'ts-loader' }],
         },
       ],
