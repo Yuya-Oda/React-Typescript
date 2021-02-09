@@ -1,21 +1,21 @@
 {
-    "compilerOptions": {
-      "target": "es5", // 最終的に出力するJSの形　IEに対応させるためes5
-      "lib": [　
-        "esnext", // 自動で最新のTSのバージョンを取ってくる
-        "dom", 
-        "dom.iterable"
-      ],
-      "allowJs": true, // JSを許可するか
-      "skipLibCheck": true,
-      "module": "esnext",
-      "moduleResolution": "node",
-      "allowSyntheticDefaultImports": true,
-      "strict": true, // 開発時に変な書き方をしてないかのチェックをできる
-      "baseUrl": "./", // パスの起点を指定？ 絶対パスで指定できるようになる
-      "jsx": "react",
-    },
-    "include": [
-      "./src/**/*" 
-    ]
-  }
+  "compilerOptions": {
+    "target": "es5", // 最終的に出力するJSの形　IEに対応させるためes5
+    "lib": [　
+      "esnext", // 自動で最新のTSのバージョンを取ってくる
+      "dom", 
+      "dom.iterable"
+    ],
+    "allowJs": true, // JSを許可するか
+    "skipLibCheck": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "strict": true, // 開発時に変な書き方をしてないかのチェックをできる
+    "baseUrl": "./", // パスの起点を指定？ 絶対パスで指定できるようになる
+    "jsx": "react",
+  },
+  "include": [
+    "./src/**/*" 
+  ]
+}
