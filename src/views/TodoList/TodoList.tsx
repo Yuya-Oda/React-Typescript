@@ -4,6 +4,7 @@ import { TodoListContext } from 'src/context/TodoListContext';
 import { TodoItem } from 'src/components/TodoItem';
 import { Todo } from 'src/model/Todo';
 import styles from './TodoList.css';
+import { useHistory } from 'react-router-dom';
 
 export const TodoList: React.FC = () => {
   // const [tittle, setTitle] = useState('');
@@ -16,6 +17,8 @@ export const TodoList: React.FC = () => {
     title: '',
     description: '',
   });
+
+  const history = useHistory();
 
   useEffect(() => {
     // const getTodoList = async () => {
@@ -69,7 +72,15 @@ export const TodoList: React.FC = () => {
         </button>
       </div>
       {todoList.map((todo) => {
-        return <TodoItem key={todo.id} todo={todo} />;
+        return (
+          <TodoItem
+            key={todo.id}
+            todo={todo}
+            onclick={() => {
+              return history.push(`/edit/${todo.id}`);
+            }}
+          />
+        );
       })}
     </React.Fragment>
   );
