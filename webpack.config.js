@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const path = require('path');
+
 module.exports = {
   mode: 'development', //開発モード 本番モード：production
   entry: './src/index.tsx', // 起点となる場所
@@ -14,8 +17,10 @@ module.exports = {
     publicPath: '/',
   },
   resolve: {
-    // ビルドする際の拡張子の指定？
-    extensions: ['.ts', '.tsx', '.js'], // Reactを導入したのでtsxを追加
+    alias: {
+      src: path.resolve(__dirname, '/src'),
+    },
+    extensions: ['.ts', '.tsx', '.js'],
   },
   module: {
     rules: [

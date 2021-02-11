@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
-import { TodoItem } from '../../components/TodoItem';
-import { Todo } from '../../model/Todo';
+import { TodoItem } from 'src/components/TodoItem';
+import { Todo } from 'src/model/Todo';
 import styles from './TodoList.css';
 
 // const todos: Todo[] = [];
