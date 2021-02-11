@@ -18,8 +18,22 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/, // 「？」で .ts　.tsx 両方に対応させる
+        test: /\.tsx?$/,
         use: [{ loader: 'ts-loader' }],
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+            },
+          },
+        ],
       },
     ],
   },
