@@ -14,6 +14,7 @@
     "strict": true, // 開発時に変な書き方をしてないかのチェックをできる
     "baseUrl": "./", // パスの起点を指定？ 絶対パスで指定できるようになる
     "jsx": "react",
+    "esModuleInterop": true
   },
   "include": [
     "./src/**/*" 
